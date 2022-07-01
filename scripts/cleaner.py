@@ -142,12 +142,14 @@ class CleanDataFrame:
 
     def normal_scale(self, df: pd.DataFrame) -> pd.DataFrame:
         try:
-            scaller = StandardScaler()
-            scalled = pd.DataFrame(scaller.fit_transform(
-                df[self.get_numerical_columns(df)]))
-            scalled.columns = self.get_numerical_columns(df)
+            scaler = StandardScaler()
+            scaler.fit(df)
+
+            features_scaled = scaler.transform(df)
+            features_scaled = pd.DataFrame(data=features_scaled,
+                                        columns=df.columns)
             logger.info(f'successfully scalled the dataframe')
-            return scalled
+            return features_scaled
         except Exception as e:
             logger.error(e)
             return df

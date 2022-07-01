@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 from matplotlib import ticker
 from logger import logger
+import warnings
+warnings.filterwarnings('ignore')
 
 
 class Plotter:
@@ -210,11 +212,77 @@ class Plotter:
         plt.savefig('../images/histogramofsales.png')
         plt.show()
 
-    def plot_correlations(self, array: np.array, prefix: str):
-        plt.figure(figsize=(30, 5))
-        plt.title(
-            f"{prefix}  Autocorrelations of Scaled Sales")
-        plt.bar(range(len(array)), array)
-        plt.grid(True)
-        plt.savefig(f'../images/{prefix}autocorrelation.png')
+    def plot_correlations(self, df):
+        corr_mat = df.corr()
+
+        # Create mask
+        mask = np.zeros_like(corr_mat, dtype=np.bool)
+        mask[np.triu_indices_from(mask, k=1)] = True
+
+        # Plot heatmap
+        plt.figure(figsize=(15, 10))
+        sns.heatmap(corr_mat, annot=True, fmt='.1f',
+                    cmap='RdBu_r', vmin=-1, vmax=1,
+                    mask=mask)
         plt.show()
+    def violin_plot(self,features ,df, name):
+        """
+        This function creates violin plots of features given in the argument.
+        """
+        # Create query
+        query = ''
+        for x in features:
+            query += "features == '" + str(x) + "' or "
+        query = query[0:-4]
+        data = df.query(query)
+        plt.figure(figsize=(12, 6))
+        sns.violinplot(x='features',
+                    y='value',
+                    hue='diagnosis',
+                    data=data,
+                    split=True,
+                    inner="quart")
+        plt.xticks(rotation=45)
+        plt.title(name)
+        plt.xlabel("Features")
+        plt.ylabel("Standardize Value")
+
+
+    def swarm_plot(self,features, df,name):
+        """
+        This function creates swarm plots of features given in the argument.
+        """
+        # Create query
+        query = ''
+        for x in features:
+            query += "features == '" + str(x) + "' or "
+        query = query[0:-4]
+
+        # Create data for visualization
+        data = df.query(query)
+        plt.figure(figsize=(12, 6))
+        sns.swarmplot(x='features', y='value', hue='diagnosis', data=data)
+        plt.xticks(rotation=45)
+        plt.title(name)
+        plt.xlabel("Features")
+        plt.ylabel("Standardize Value")
+
+
+    def box_plot(self,features, df, name):
+        """
+        This function creates box plots of features given in the argument.
+        """
+        # Create query
+        query = ''
+        for x in features:
+            query += "features == '" + str(x) + "' or "
+        query = query[0:-4]
+
+        # Create data for visualization
+        data = df.query(query)
+        plt.figure(figsize=(12, 6))
+        sns.boxplot(x='features', y='value', hue='diagnosis', data=data)
+        plt.xticks(rotation=45)
+        plt.title(name)
+        plt.xlabel("Features")
+        plt.ylabel("Standardize Value")
