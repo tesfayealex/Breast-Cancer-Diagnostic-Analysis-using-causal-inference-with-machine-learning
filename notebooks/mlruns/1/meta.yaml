@@ -1,0 +1,4 @@
+artifact_location: file:///home/etta/Documents/Projects/Breast-Cancer-Diagnostic-Analysis-using-causal-inference-with-machine-learning/notebooks/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: XGBoost with cleaned data
