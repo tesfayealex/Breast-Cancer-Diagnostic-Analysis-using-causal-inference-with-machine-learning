@@ -1,1 +1,41 @@
 2022-06-29 05:01:28,903:logger:successfully displayed count plot
+2022-06-30 21:32:00,745:logger:filesystem for 'gdrive': '<class 'dvc_objects.fs.implementations.gdrive.GDriveFileSystem'>' missing dependencies
+2022-06-30 21:33:23,829:logger:
+2022-06-30 21:33:34,907:logger:
+2022-06-30 21:33:41,422:logger:
+2022-06-30 21:34:31,224:logger:
+2022-06-30 21:35:17,613:logger:
+2022-06-30 21:36:30,525:logger:
+2022-06-30 21:36:47,924:logger:
+2022-06-30 21:37:13,967:logger:
+2022-06-30 21:48:40,152:logger:successfully dropped columns
+2022-06-30 21:48:46,929:logger:"['Unnamed: 32' 'id' 'diagnosis'] not found in axis"
+2022-06-30 21:53:57,884:logger:"['Unnamed: 32' 'id' 'diagnosis'] not found in axis"
+2022-06-30 21:54:31,364:logger:"['Unnamed: 32' 'id' 'diagnosis'] not found in axis"
+2022-06-30 21:55:37,593:logger:successfully dropped columns
+2022-06-30 21:56:56,758:logger:successfully dropped columns
+2022-06-30 21:57:22,177:logger:successfully dropped columns
+2022-06-30 21:57:25,554:logger:successfully got numerical columns
+2022-06-30 21:57:25,570:logger:successfully got numerical columns
+2022-06-30 21:57:25,571:logger:successfully scalled the dataframe
+2022-06-30 21:57:56,042:logger:successfully dropped columns
+2022-06-30 21:58:11,504:logger:successfully dropped columns
+2022-06-30 21:58:24,178:logger:successfully got numerical columns
+2022-06-30 21:58:24,192:logger:successfully got numerical columns
+2022-06-30 21:58:24,194:logger:successfully scalled the dataframe
+2022-06-30 21:59:00,961:logger:successfully displayed count plot
+2022-07-01 10:46:23,717:logger:successfully dropped columns
+2022-07-01 10:46:23,977:logger:successfully scalled the dataframe
+2022-07-01 10:46:24,467:logger:successfully displayed count plot
+2022-07-01 10:47:15,913:logger:successfully dropped columns
+2022-07-01 10:47:16,128:logger:successfully scalled the dataframe
+2022-07-01 10:47:16,716:logger:successfully displayed count plot
+2022-07-01 10:49:04,822:logger:successfully dropped columns
+2022-07-01 10:49:05,041:logger:successfully scalled the dataframe
+2022-07-01 10:49:05,475:logger:successfully displayed count plot
+2022-07-01 10:59:18,236:logger:successfully dropped columns
+2022-07-01 10:59:18,435:logger:successfully scalled the dataframe
+2022-07-01 10:59:18,834:logger:successfully displayed count plot
+2022-07-01 11:06:30,977:logger:successfully dropped columns
+2022-07-01 11:06:31,200:logger:successfully scalled the dataframe
+2022-07-01 11:06:31,681:logger:successfully displayed count plot

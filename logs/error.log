@@ -1,0 +1,12 @@
+2022-06-30 21:32:00,745:logger:filesystem for 'gdrive': '<class 'dvc_objects.fs.implementations.gdrive.GDriveFileSystem'>' missing dependencies
+2022-06-30 21:33:23,829:logger:
+2022-06-30 21:33:34,907:logger:
+2022-06-30 21:33:41,422:logger:
+2022-06-30 21:34:31,224:logger:
+2022-06-30 21:35:17,613:logger:
+2022-06-30 21:36:30,525:logger:
+2022-06-30 21:36:47,924:logger:
+2022-06-30 21:37:13,967:logger:
+2022-06-30 21:48:46,929:logger:"['Unnamed: 32' 'id' 'diagnosis'] not found in axis"
+2022-06-30 21:53:57,884:logger:"['Unnamed: 32' 'id' 'diagnosis'] not found in axis"
+2022-06-30 21:54:31,364:logger:"['Unnamed: 32' 'id' 'diagnosis'] not found in axis"
