@@ -234,8 +234,8 @@ def get_pipeline(model, x):
         logger.error(e)
 
 
-def dvc_get_data(path, version='d47aedd9e2d580e06a6ef7ce1732e8b6'):
-    try:
+def dvc_get_data(path, version='08e4c999c09f55b83cd4a4a57be1d2a099035be0'):
+    # try:
         repo = "../"
         content = dvc.api.read(path=path,
                                repo=repo,
@@ -243,9 +243,10 @@ def dvc_get_data(path, version='d47aedd9e2d580e06a6ef7ce1732e8b6'):
         df = pd.read_csv(io.StringIO(content), sep=",")
 
         return df
-    except Exception as e:
-        logger.error(e)
-        return pd.DataFrame()
+    # except Exception as e:
+    #     print(e)
+    #     logger.error(e)
+    #     return pd.DataFrame()
 
 
 def run_train_pipeline(model, x, y, experiment_name, run_name):
