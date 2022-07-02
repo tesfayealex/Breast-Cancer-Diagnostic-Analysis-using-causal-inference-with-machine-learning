@@ -1,0 +1,15 @@
+artifact_uri: file:///home/etta/Documents/Projects/Breast-Cancer-Diagnostic-Analysis-using-causal-inference-with-machine-learning/notebooks/mlruns/1/0d5096a7f759469eab1dbff80d3a4339/artifacts
+end_time: 1656667517842
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 0d5096a7f759469eab1dbff80d3a4339
+run_uuid: 0d5096a7f759469eab1dbff80d3a4339
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1656667516413
+status: 4
+tags: []
+user_id: etta
