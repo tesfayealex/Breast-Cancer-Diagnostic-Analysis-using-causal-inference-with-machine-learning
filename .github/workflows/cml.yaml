@@ -7,14 +7,21 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - uses: iterative/setup-cml@v1
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
       - name: Metrics
 
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |     
-          echo "# Metrics" > report.md
+          echo "## Plots" >> report.md
+          echo "### correlation Matrix" >> report.md
+          cml publish ./images/correlation.png --md >> report.md
+          echo "### Feature Importance" >> report.md
+          cml publish ./images/feature_importance.png --md >> report.md
+          echo "###  Complete causal graph" >> report.md
+          cml publish ./images/causal_graph_complete.png --md >> report.md
+          echo "###  Complete causal graph with threshold" >> report.md
+          cml publish ./images/causal_graph_complete_threshold.png --md >> report.md
+          echo "###  causal graph with only directly related features" >> report.md
+          cml publish ./images/causal_graph_with_important.png --md >> report.md
+          # cat report.md
           cml send-comment report.md

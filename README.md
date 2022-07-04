@@ -5,9 +5,9 @@
 <p>
  This project  performas Breast Cancer Diagnostic Analysis using Causal Inference following these steps
 
-    Perform a causal inference task using Pearl’s framework
-    Infer the causal graph from observational data and validate the graph;
-    Merge machine learning with causal inference
+- Perform a causal inference task using Pearl’s framework
+- Infer the causal graph from observational data and validate the graph;
+- Merge machine learning with causal inference
 </p>
 
 
@@ -40,18 +40,21 @@ Data source For this Project came from Kaggle ( originally from UCI Machine Lear
 ## Installation Guide
 
 To install and run this project
-        ```bash
+        
             git clone https://github.com/tesfayealex/Breast-Cancer-Diagnostic-Analysis-using-causal-inference-with-machine-learning
 
             cd Breast-Cancer-Diagnostic-Analysis-using-causal-inference-with-machine-learning
 
             pip install -r requirements.txt
-        ```
+        
   
 ## Project Structure
 
 ### notebooks 
 This folder holds the nooteboks used to process and visualize the data 
+- EDA - holds Data Exploratory features and visualizations
+- ML_Models - holds ML Models used to get feature importance and prediction scores
+- causal_inference - holds causal infernce features and graphs
 ### data
 This folder holds the data of the project (data is store on google drive using DVC)
 ### logs 
@@ -59,7 +62,7 @@ This folder holds logs of the function runs
 ### images
 This folder holds images that are necessary for the project
 ### scripts
-This folder holds script python files that mosularize the codebase
+This folder holds script python files that modularize the codebase
 ### tests
 This folder holds unit test files
 
